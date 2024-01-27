@@ -18,7 +18,6 @@ const links = [
     href: '/dashboard/invoices',
     icon: DocumentDuplicateIcon,
   },
-  { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
   { name: 'Login', href: 'https://id.sandbox.securitize.io/#/authorize?client_id=a40e759d-f208-40b1-9d71-a54f0bc9e523&scope=info details verification&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboard%2Fauth', icon: ArrowLongUpIcon },
 ];
 
