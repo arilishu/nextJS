@@ -8,9 +8,13 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import {htmlEntities} from '@/app/lib/data';
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
+//console.log(window.location.href);
+const url = encodeURIComponent(document.location.origin+'/dashboard/auth')
+console.log(url);
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
@@ -18,11 +22,13 @@ const links = [
     href: '/dashboard/invoices',
     icon: DocumentDuplicateIcon,
   },
-  { name: 'Login', href: 'https://id.sandbox.securitize.io/#/authorize?client_id=a40e759d-f208-40b1-9d71-a54f0bc9e523&scope=info details verification&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboard%2Fauth', icon: ArrowLongUpIcon },
+  { name: 'Login', href: 'https://id.sandbox.securitize.io/#/authorize?client_id=a40e759d-f208-40b1-9d71-a54f0bc9e523&scope=info details verification&redirect_uri='+url, icon: ArrowLongUpIcon },
 ];
 
 export default function NavLinks() {
   const pathname = usePathname();
+
+  
   return (
     <>
       {links.map((link) => {
