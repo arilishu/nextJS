@@ -13,7 +13,9 @@ import {htmlEntities} from '@/app/lib/data';
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
 //console.log(window.location.href);
-const url = encodeURIComponent(document.location.origin+'/dashboard/auth')
+var url="";
+if (typeof document !== 'undefined') 
+  url = encodeURIComponent(document.location.origin+'/dashboard/auth')
 console.log(url);
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
