@@ -13,8 +13,6 @@ export default async function Page({
   const country = searchParams?.country || '';
   const authorized = searchParams?.authorized || '';
   
-  
-  
     return (
       <div>
       <LoginData code={code} />
